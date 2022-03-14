@@ -8,6 +8,7 @@ namespace Array_Max_Result
 		static void Main(string[] args)
 		{
 			Challenge1();
+			Challenge2();
 		}
 		static void Challenge1()
 		{
@@ -31,6 +32,17 @@ namespace Array_Max_Result
 			}
 
 			Console.WriteLine($"The number {number} has a score of { number * counter}");
+		}
+		static void Challenge2()
+        {
+			int year;
+			Console.Write("Please insert a Year to check if this year is leap year or not :");
+			year =int.Parse(Console.ReadLine());
+			if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+				Console.WriteLine(year + " is a leap year ");
+			else
+				Console.WriteLine(year + " is not a leap year ");
+
 		}
 
 
