@@ -9,6 +9,7 @@ namespace Array_Max_Result
 		{
 			Challenge1();
 			Challenge2();
+			Challenge3();
 		}
 		static void Challenge1()
 		{
@@ -44,6 +45,36 @@ namespace Array_Max_Result
 				Console.WriteLine(year + " is not a leap year ");
 
 		}
+	        static void Challenge3()
+        {
+            Console.Write("please insert a sequence of numbers: ");
+            string input = Console.ReadLine();
+            string[] arr1 = input.Split();
+            int product = 1;
+            int sum = 0;
+            foreach (string number in arr1)
+            {
+                if (int.Parse(number) < 0)
+                {
+                    Console.WriteLine("wrong number..it is less than zero ");
+                    break;
+                }
+                else
+                {
+                    product *= int.Parse(number);
+                    sum += int.Parse(number);
+                }
+            }
+            if (product == sum)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }
+        }
+
 
 
 
