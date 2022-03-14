@@ -10,6 +10,8 @@ namespace Array_Max_Result
 			Challenge1();
 			Challenge2();
 			Challenge3();
+			Challenge4();
+
 		}
 		static void Challenge1()
 		{
@@ -74,10 +76,44 @@ namespace Array_Max_Result
                 Console.WriteLine("No");
             }
         }
+		static void Challenge4()
+        {
+			Console.Write("please insert number of Rows: ");
+			int numRows = int.Parse(Console.ReadLine());
+			Console.Write("please insert number of Columns: ");
+			int numColumn = int.Parse(Console.ReadLine());
+			int[,] arr1 = new int[numRows, numColumn];
+			Console.Write("please insert the elements in the matrix :\n");
+			for (int i = 0; i < arr1.GetLength(0); i++)
+			{
+				for (int x = 0; x < arr1.GetLength(1); x++)
+				{
+					Console.Write("element - [{0}],[{1}] : ", i, x);
+					arr1[i, x] = int.Parse(Console.ReadLine());
+				}
+			}
+			int sum = 0;
+			for (int i = 0; i < numRows; ++i)
+			{
+				for (int j = 0; j < numColumn; ++j)
+				{
+					sum = sum + arr1[i, j];
+				}
+				Console.WriteLine("the sum of row " + i + " = " + sum);
+				sum = 0;
+			}
+		}
 
 
 
 
 
 	}
+
+
+
+
+
+
 }
+
