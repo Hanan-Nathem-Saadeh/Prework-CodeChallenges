@@ -7,9 +7,9 @@ namespace Array_Max_Result
 	{
 		static void Main(string[] args)
 		{
-			Challenge1();
-			Challenge2();
-			Challenge3();
+			//Challenge1();
+			//Challenge2();
+			//Challenge3();
 			Challenge4();
 
 		}
@@ -98,22 +98,12 @@ namespace Array_Max_Result
 				for (int j = 0; j < numColumn; ++j)
 				{
 					sum = sum + arr1[i, j];
+					Console.Write( arr1[i, j] + ",");
 				}
-				Console.WriteLine("the sum of row " + i + " = " + sum);
+				Console.WriteLine(" the sum of this row is  " + sum);
 				sum = 0;
 			}
 		}
-
-
-
-
-
 	}
-
-
-
-
-
-
 }
 
